@@ -121,14 +121,14 @@ while True:
 
         print(view_products(products))  # Visa alla produkter
 
-        choice = input(bcolors.GREEN + "Vill du (V)isa, (T)a bort, (L)ägga till eller (Ä)ndra en produkt? ").strip().upper()
+        choice = input(bcolors.GREEN + "Vill du (V)isa, (T)a bort, (L)ägga till eller (Ä)ndra en produkt? " + bcolors.DEFAULT).strip().upper()
 
         if choice == "L":  # Lägg till produkt
             name = input("Namn: ")
             desc = input("Beskrivning: ")
             price = float(input("Pris: "))
             quantity = int(input("Kvantitet: "))
-            print(add_product(bcolors.DEFAULT + products, name, desc, price, quantity))
+            print(add_product(products, name, desc, price, quantity))
             sleep(0.5)
 
         else:
