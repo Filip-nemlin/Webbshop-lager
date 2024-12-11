@@ -13,7 +13,7 @@ from colors import bcolors
 
 
 def load_data(filename): 
-    """Laddar produktdata från en CSV-fil."""
+    #Laddar produktdata från en CSV-fil.
     products = [] 
     try:
         with open(filename, 'r') as file:
@@ -40,7 +40,7 @@ def load_data(filename):
 
 
 def truncate(text, length):
-    """Avkortar text om den är längre än angiven längd."""
+    #Avkortar text om den är längre än angiven längd
     return (text[:length] + "...") if len(text) > length else text
 
 
@@ -51,7 +51,7 @@ def __str__(self):
 
 
 def remove_product(products, id):
-    """Tar bort en produkt baserat på ID."""
+    #Tar bort en produkt baserat på id
     temp_product = None
 
     for product in products:
@@ -67,7 +67,7 @@ def remove_product(products, id):
 
 
 def view_product(products, id):
-    """Visar en produkt baserat på ID."""
+    #Visar en produkt baserat på id
     for product in products:
         if product["id"] == id:
             return f"Visar produkt: {product['name']} - {product['desc']} - {product['price']} kr - Antal: {product['quantity']}"
